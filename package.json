@@ -1,0 +1,30 @@
+{
+  "name": "learn-expressjs",
+  "version": "1.0.0",
+  "description": "In this document we will explore how to create web applications with [ExpressJS](http://http://expressjs.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codex-academy/learn-expressjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codex-academy/learn-expressjs/issues"
+  },
+  "homepage": "https://github.com/codex-academy/learn-expressjs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "moment": "^2.22.2",
+    "standard": "^11.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
