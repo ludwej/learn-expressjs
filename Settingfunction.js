@@ -1,4 +1,4 @@
-module.exports = function setBill(){
+module.exports = function setBill() {
   var callSettings = 0
   var smsSettings = 0
   var totalS = 0
@@ -7,42 +7,43 @@ module.exports = function setBill(){
   var smsCost = 0
   var warning = 0
   var critical = 0
-  
+
   let color = '';
 
   var actionList = [];
 
-  var updateSetting = function (billType) {  
-    
+  var updateSetting = function (billType) {
+
     let type = billType;
-    
-   if(totalS >= critical){
-     return;
-   }
-// else{ 
+
+    if (totalS >= critical) {
+      return color;
+    }
+
+    // else{ 
     if (type === 'sms') {
       smsSettings += smsCost;
-console.log(smsSettings);
+      console.log(smsSettings);
 
       actionList.push({
         type: type,
         price: getSms(),
         timestamp: new Date()
-     });
+      });
       // billCost += smsCost;
     }
     if (type === 'call') {
       callSettings += callCost;
-     
-     }
-    
-      actionList.push({
+
+    }
+
+    actionList.push({
       type: type,
       price: getCall(),
       timestamp: new Date()
 
       // billCost += callCost;
-      });
+    });
     return totalS = smsSettings + callSettings;
   }
 
@@ -94,31 +95,31 @@ console.log(smsSettings);
 
   var ReachedCritical = function () {
     return getTotals() >= getCritical();
-    
+
   }
-  
-  function actionsFor(billT){
-    return actionList.filter((bill) => bill.type === billT )
+
+  function actionsFor(billT) {
+    return actionList.filter((bill) => bill.type === billT)
   }
 
 
   function actions() {
     return actionList;
-}
-
-function myColor() {
-
-  if (totalS >= critical) {
-    let color = 'danger'
-    return color;
   }
-  if (totalS >= warning) {
-    let color = 'warning'
-    return color;
-  }
-}
 
-  
+  function myColor() {
+
+    if (totalS >= critical) {
+      let color = 'danger'
+      return color;
+    }
+    if (totalS >= warning) {
+      let color = 'warning'
+      return color;
+    }
+  }
+
+
 
   return {
     updateSetting,
@@ -140,7 +141,7 @@ function myColor() {
     actionsFor,
     myColor
 
-   
+
 
   }
 }

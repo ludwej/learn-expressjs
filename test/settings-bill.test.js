@@ -9,6 +9,7 @@ describe('settings-bill', function() {
     const set = SettingsBill() ;
 
     set.setSmsCost(11);
+    set.setCritical(40)
     set.updateSetting('sms');
     set.updateSetting('sms');
     set.updateSetting('sms');
@@ -20,6 +21,7 @@ describe('settings-bill', function() {
     const set = SettingsBill() ;
 
     set.setCallCost(2);
+    set.setCritical(40);
     set.updateSetting('call')
     set.updateSetting('call')
     set.updateSetting('call')
@@ -34,6 +36,7 @@ describe('settings-bill', function() {
 
     set.setCallCost(2.75);
     set.setSmsCost(2);
+    set.setCritical(40)
     set.updateSetting('call')
     set.updateSetting('call')
     set.updateSetting('sms');
