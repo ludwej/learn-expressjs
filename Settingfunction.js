@@ -119,6 +119,20 @@ module.exports = function setBill() {
     }
   }
 
+  function resetBtn(){
+    var callSettings = 0;
+    var smsSettings = 0;
+    var totalS = 0;
+    var callCost = 0;
+    var smsCost = 0;
+    var warning = 0;
+    var critical = 0;
+    let color = '';
+    var actionList = [];
+
+
+  }
+
 
 
   return {
@@ -139,7 +153,8 @@ module.exports = function setBill() {
     smsCostType,
     actions,
     actionsFor,
-    myColor
+    myColor,
+    resetBtn
 
 
 

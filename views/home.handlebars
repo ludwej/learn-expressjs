@@ -1,4 +1,21 @@
 
+<body>
+    <div class="container">
+      <div class="row">
+  
+        <div class="twelve columns box">
+          <h3>Bill with settings</h3>
+          <div class="">
+            Select the call or sms radio button. Update the appropriate total and the overall total when the ADD button in pressed.
+            <i>Calls costs should now be configurable using the settings section.</i>
+          </div>
+          <div class="">
+            <i>If the total cost exceed the warning level show the total cost in orange, if it exceeds the critical level show
+              it in red and prevent any new costs from being added. The warning and critical level should both be configurable
+              now.</i>
+          </div>
+  
+          <hr>
 
           <div class="row">
             <form action="/action" method="POST">
@@ -14,6 +31,16 @@
               </label>
               <button class="button-primary" type="submit" name="button">Add</button>
             </form>
+            </form>
+
+
+              <form action="/resetBtn" method="POST">
+                <button class="button-primary" type="submit" name="button">Reset</button>
+              
+              </form>
+
+
+
 
               <h5>Totals</h5>
                   <table>
@@ -43,13 +70,13 @@
 
               <form class="" action="/settings" method="post">
                 <label for="exampleEmailInput">Call cost</label>
-                <input class="u-full-width callCostSetting" name='callCost' type="number" placeholder="eg. 2.55" value="{{Call}}">
+                <input class="u-full-width callCostSetting" name='callCost' step="0.01" type="number" placeholder="eg. 2.55" value="{{Call}}">
                 <label for="exampleEmailInput">SMS cost</label>
-                <input class="u-full-width smsCostSetting" name='smsCost' type="number" placeholder="eg. 0.65" value="{{Sms}}">
+                <input class="u-full-width smsCostSetting" name='smsCost' step="0.01" type="number" placeholder="eg. 0.65" value="{{Sms}}">
                 <label for="">Warning level</label>
-                <input class="u-full-width warningLevelSetting " name='warningLevel' type="number" placeholder="eg. 30.00" class="warningLevel" value="{{Warning}}">
+                <input class="u-full-width warningLevelSetting " name='warningLevel' step="0.01" type="number" placeholder="eg. 30.00" class="warningLevel" value="{{Warning}}">
                 <label for="">Critical level</label>
-                <input class="u-full-width criticalLevelSetting" name='criticalLevel' type="number" placeholder="eg. 65.00" value="{{Critical}}">
+                <input class="u-full-width criticalLevelSetting" name='criticalLevel'step="0.01"  type="number" placeholder="eg. 65.00" value="{{Critical}}">
                 <button class="button-primary updateSettings" type="submit" name="button">Update settings</button>
               </form>
 

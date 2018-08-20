@@ -71,6 +71,12 @@ app.post('/action', function (req, res) {
   res.redirect('/')
 });
 
+app.post('/resetBtn', function (req, res) {
+  billSetting.resetBtn();
+
+  res.render('home')
+});
+
 app.get('/actions', function (req, res) {
   
 
