@@ -1,12 +1,12 @@
 module.exports = function setBill() {
-  var callSettings = 0
-  var smsSettings = 0
-  var totalS = 0
+  var callSettings = 0;
+  var smsSettings = 0;
+  var totalS = 0;
 
-  var callCost = 0
-  var smsCost = 0
-  var warning = 0
-  var critical = 0
+  var callCost = 0;
+  var smsCost = 0;
+  var warning = 30;
+  var critical = 60;
 
   let color = '';
 
