@@ -5,8 +5,8 @@ module.exports = function setBill() {
 
   var callCost = 0;
   var smsCost = 0;
-  var warning = 30;
-  var critical = 60;
+  var warning = 0;
+  var critical = 0;
 
   let color = '';
 
